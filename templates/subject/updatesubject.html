@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATESUBJECT</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+     select {
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+
+    <p> <a href="/"> Goto Home</a></p>
+    <h1>Please update the subject details and submit the form</h1>
+    <br>
+    <br>
+    <form action="/updatesubject" method="post">
+         <p>
+            <label style="width: 140px"for="subject_id"><b>Subject ID:</b></label>
+            <input type ="text" style="width: 200px; background-color:lightblue" name="subject_id"  value="{{ row[0] }}" readonly placeholder="Enter Subject ID" size="10" required />
+        </p> 
+        <br>
+        <p> 
+            <label for="subject_name"><b>Subject Name:</b></label>
+            <input style="width: 200px" type="text" name="subject_name" value="{{ row[1] }}" placeholder="Enter subject Name" maxlength = "28">
+        </p>
+        <br>
+        <p>
+            <label for="subject_course_id"><b>Subject Course ID:</b></label>
+            <input style="width: 200px" type="text" name="subject_course_id" value="{{ row[2] }}" placeholder="Enter Subject Course Id" maxlength = "18">
+        </p>
+        <br>
+        <p>
+            <button class=button type="submit" value="submit">Submit Subject Details</button>
+        </p>
+    </form>
+</body>
+</html>

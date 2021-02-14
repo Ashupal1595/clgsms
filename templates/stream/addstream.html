@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADDSTREAM</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+     select {
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+    <p> <a href="/"> Goto Home</a></p>
+
+    <h1> Pleae fill the stream details and submit the form</h1>
+    <br>
+    <br>
+    <form action="/addstream" method="post">
+        <p>
+            <label style="width: 140px"for="stream_id"><b>Stream ID:</b></label>
+            <input type ="text" style="width: 200px" name="stream_id"  placeholder="Enter id" size="10" required />
+        </p> 
+        <br>
+         
+        <p> 
+            <label for="stream_name"><b>Stream Name:</b></label>
+           <!-- <input style="width: 200px" type="text" name="stream_name" placeholder="Enter stream Name" maxlength = "28" required>-->
+             <select style="width: 200px" name="stream_name" id="stream_name">
+             <option value="Art">Art</option>
+             <option value="Science">Science</option>
+             <option value="Commerce">Commerce</option>
+             <option value="Information Technology">Information Technology(IT)</option>
+             <option value="Physics ">Physics</option>
+             <option value="Chemistry">  Chemistry</option>
+             <option value="Biology">Biology</option>
+             <option value="Mathematics">Mathematics</option>
+                           
+          </select>
+        </p>
+        <br>
+        <p>
+            <label for="head_id"><b>Head ID:</b></label>
+            <input style="width: 200px" type="text" name="head_id" placeholder="Enter Head ID" maxlength = "28">
+        </p>
+        <br>
+         <p>
+            <label for="stream_location"><b>Stream Location:</b></label>
+            <input style="width: 200px" type="text" name="stream_location" placeholder="Enter Location" maxlength = "28" required>
+        </p>
+        <br>        
+        <p>
+            <button class=button type="submit" value="submit">Submit stream Details</button>
+        </p>
+    </form>
+ 
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADDCOURSE</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+     select {
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+    <p> <a href="/"> Goto Home</a></p>
+    <h1> Pleae fill the course details and submit the form </h1>
+    <br>
+    <br>
+    <br>
+    <form action="/addcourse" method="post">
+         <p>
+            <label style="width: 140px"for="course_id"><b>Course ID:</b></label>
+            <input type ="text" style="width: 200px" name="course_id"  placeholder="Enter Course ID" maxlength = "18">
+        </p> 
+        <br>
+        <p> 
+            <label for="course_name"><b>Course Name:</b></label>
+           <!-- <input style="width: 200px" type="text" name="course_name"placeholder="Enter Course Name" maxlength = "28"> -->
+            <select style="width: 200px" name="course_name" id="course_name">
+             <option value="Bsc-IT">Bsc-IT</option>
+             <option value="Bsc-CS">Bsc-CS</option>
+             <option value="B.M.S">B.M.S</option>
+             <option value="B.Com">B.Com</option>
+             <option value="B.C.B.I">B.C.B.I</option>
+             <option value="B.Ed">B.Ed</option>
+             <option value="D.EL.Ed">D.EL.Ed</option>
+                                        
+          </select>
+        </p>
+        <br>
+        <p>
+            <label for="course_stream_id"><b>Course Stream ID:</b></label>
+            <input style="width: 200px" type="text" name="course_stream_id"placeholder="Enter Course Stream ID" maxlength = "28">
+        </p>
+        <br>
+        <br>
+        <br>
+        <p>
+            <button class = button type="submit" value="submit">Submit Course Details</button>
+        </p>
+    </form>
+ 
+</body>
+</html>

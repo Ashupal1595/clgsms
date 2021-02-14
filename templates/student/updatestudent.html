@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATESTUDENT</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+     select {
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+
+    <p> <a href="/"> Goto Home</a></p>
+    <h1>Please update the student details and submit the form</h1>
+    <br>
+    <br>
+    <form action="/updatestudent" method="post">
+         <p>
+            <label style="width: 140px"for="stu_roll_no"><b>Student ID:</b></label>
+            <input type ="text" style="width: 200px; background-color:lightblue" name="stu_roll_no"  value="{{ row[0] }}" readonly placeholder="Enter Student ID" size="10" required/>
+        </p> 
+        <br>
+        <p> 
+            <label for="stu_first_name"><b>Student First Name:</b></label>
+            <input style="width: 200px" type="text" name="stu_first_name" value="{{ row[1] }}" placeholder="Enter First Name" maxlength = "48" required/>
+        </p>
+        <br>
+        <p>
+            <label for="stu_middle_name"><b>Student Middle Name:</b></label>
+            <input style="width: 200px" type="text" name="stu_middle_name" value="{{ row[2] }}" placeholder="Enter  Middle Name" maxlength = "48">
+        </p>
+        <br>
+         <p>
+            <label for="stu_last_name"><b>Student Last Name:</b></label>
+            <input style="width: 200px" type="text" name="stu_last_name" value="{{ row[3] }}" placeholder="Enter Last Name" maxlength = "48">
+        </p>
+        <br>
+        <p>
+            <label for="stu_mobile_no"><b>Student Mobile No:</b></label>
+            <input style="width: 200px" type="text" name="stu_mobile_no" value="{{ row[5] }}" placeholder="Enter Mobile No" maxlength = "15">  
+        </p>
+        <br>
+        <p>
+            <label for="stu_email_id"><b>Student Email ID:</b></label>
+            <input style="width: 200px" type="text" name="stu_email_id" value="{{ row[5] }}" placeholder="Enter Email ID" maxlength = "48">  
+        </p>
+        <br>
+         <p>
+            <label for="stu_address"><b>Student Address:</b></label>
+            <input style="width: 200px" type="text" name="stu_address" value="{{ row[5] }}" placeholder="Enter Address" maxlength = "98">  
+        </p>
+        <br>
+         <p>
+            <label for="stu_dob"><b>Student D.O.B:</b></label>
+            <input type="date" id="birthday" style="width: 200px" name="stu_dob" placeholder="Enter D.O.B">  
+        </p>
+        <br>
+         <p>
+            <label for="stu_gender"><b>Student Gender:</b></label>
+             <select style="width: 200px" name="stu_gender" id="stu_gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+        </p>
+        <br> 
+        <p>
+            <label for="stu_father_name"><b>Student Father Name:</b></label>
+            <input style="width: 200px" type="text" name="stu_father_name" value="{{ row[5] }}" placeholder="Enter Father Name" maxlength = "28">  
+        </p>
+        <br>
+            <label for="stu_mother_name"><b>Student Mother Name:</b></label>
+            <input style="width: 200px" type="text" name="stu_mother_name" value="{{ row[5] }}" placeholder="Enter Mother Name" maxlength = "28">  
+        </p>
+        <br>
+        <p>
+            <label for="stu_course_id"><b>Student Course ID:</b></label>
+            <input style="width: 200px" type="text" name="stu_course_id" value="{{ row[7] }}" placeholder="Enter Course ID" maxlength = "18">
+        </p>
+        <br>
+        <p>
+            <label for="stu_standard"><b>Student standard:</b></label>
+            <input style="width: 200px" type="text" name="stu_standard" value="{{ row[8] }}" placeholder="Enter standard" maxlength = "28">
+        </p>
+        <br>
+        <p>
+            <label for="stu_category"><b>Student Category:</b></label>
+            <input style="width: 200px" type="text" name="stu_category" value="{{ row[8] }}" placeholder="Enter category" maxlength = "28">
+        </p>
+        <br>
+        <p>
+            <label for="stu_stream"><b>Student Stream:</b></label>
+            <input style="width: 200px" type="text" name="stu_stream" value="{{ row[8] }}" placeholder="Enter Stream" maxlength = "28">
+        </p>
+        <br>
+                
+        <p>
+            <button class=button type="submit" value="submit">Submit Student Details</button>
+        </p>
+    </form>
+ 
+</body>
+</html>

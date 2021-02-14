@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Searching for staff</title>
+<head>
+    <meta charset="UTF-8">
+         <title>SEARCHCOURSE</title>
+     <style>
+     label {
+        width: 140px;
+        background-color: #f1f1f1;
+        margin-left: 450px;
+
+           }
+    select {
+        margin-left: 140px;
+        font-size: 20px;	
+        outline: 2px solid blue;
+        background: #f1f1f1;
+        width: 200px;
+            }
+     input {
+        display: inline-block;
+        margin-left: 140px;
+        outline: 2px solid blue;
+        font-size: 20px;
+        border: 1px solid grey;
+        background: #f1f1f1;
+        width: 250px;
+            }
+     
+        h1{
+    font-size:30px;
+    color:white;
+    background-color:blue; 
+    text-align: center;
+    border: 1px solid black;
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-left: 100px; 
+  background: #2196F3;
+  color: white;
+  border: 2px solid blue;
+  border-left: none;
+  cursor: pointer;
+  width: 15%;
+}
+
+button:hover {background-color: #3e8e41}
+
+  button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 3px solid blue;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid blue;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body> 
+<p> <a href="/"> Goto Home</a></p> 
+<h1> Pleae search the course details and submit the form</h1>
+     <form action="/searchcourse" method="post">
+     <p>
+       <label for="course_id"><b>Please enter one of the following fileds ID:</b></label>
+     </p>
+<br>
+     <p>
+          <select name="search_field" id="search_filed">
+              <option value="all" >Get all Records</option>
+              <option value="course_id">search by course ID</option>
+              <option value="course_name">Search by course Name</option>
+          </select>
+           
+          <input type="text" placeholder="Search.." name="search">
+          
+    <button type="submit" value="submit" >Submit the query</button>
+  </p>
+</form>
+<br>
+<div style="overflow-x:auto; overflow:scroll;"> 
+<table>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+      <th>Course stream ID(/th)
+     </tr>
+{% for row in table %}
+    <tr>
+ {% for item in row %}
+  
+      <td>{{item}}</td>
+ {% endfor %}
+  </tr>
+ {% endfor %}
+
+</table>
+</div>
+</body>
+</html>

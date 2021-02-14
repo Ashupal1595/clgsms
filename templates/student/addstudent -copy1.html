@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADDSTUDENT</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: #ffffcc;
+        outline: 1px #050218;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 1px #050218;
+        background-color:#ffffcc;
+            }
+     select {
+        margin-left: 150px;
+        outline: 1px #050218;
+        background-color:#ffffcc;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #140A46;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {
+background-color:#19152A;
+}
+
+.button:active {
+  background-color: #2C264A;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+    
+    {% extends "index.html" %}
+    {% block content %} 
+    <br>
+    <p style="font-size: 20px; margin-left: 340px;"> Pleae fill the student details and submit the form </p>
+    <br>
+    <div style="height:450px;overflow-y:auto">
+    <form action="/addstudent" method="post" >
+        <p>
+            <label for="stu_roll_id">Student Id: </label>
+            <input type="text" style="width: 200px" name="stu_roll_id" placeholder="Enter ID">
+        </p>
+        <br>
+        <p>
+            <label for="stu_first_name">Student First Name: </label>
+            <input type="text" style="width: 200px" name="stu_frist_name" placeholder="Enter Frist Name" maxlength = "48">
+        </p>
+        <br>
+        <p>
+            <label style = margin width: 100px" for="stu_middle_name">Student  Middle  Name: </label>
+            <input type="text" style="width: 200px" name="stu_middle_id" placeholder="Enter Midddle Name" maxlength = "48">
+        </p>
+        <br>
+        <p>
+            <label for="stu_last_name">Student Last Name: </label>
+            <input type="text" style="width: 200px" name="stu_last_name" placeholder="Enter Last Name" maxlength = "48">
+        </p>
+        <br>
+        <p>
+            <label style="width: 140px" for="stu_mobile no">Student Mobile No: </label>
+            <input type="text" style="width: 200px" name="stu_mobile no" placeholder="Enter Mobile No" maxlength = "48">
+        </p>
+        <br>
+ 
+        <p>
+            <label style="width: 140px" for="stu_email_id">Student Email ID: </label>
+            <input type="text" style="width: 200px" name="stu_email_id" placeholder="Enter Email ID" maxlength = "13">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_address">Student Address: </label>
+            <input type="text" style="width: 200px" name="stu_address" placeholder="Enter Address" maxlength = "195">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_dob">Student D.O.B: </label>
+            <input type="date" id="birthday" style="width: 200px" name="stu_dob" placeholder="Enter D.O.B">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_gender">Student Gender: </label>
+            <select style="width: 200px" name="stu_gender" id="student_gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_father_name">Student Father Name: </label>
+            <input type="text" style="width: 200px" name="stu_father_name" placeholder="Enter Father Name" maxlength = "98">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_mother_name">Student Mother Name: </label>
+            <input type="text" style="width: 200px" name="stu_mother_name" placeholder="Enter Mother Name" maxlength = "98">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_course_id">Student Course ID: </label>
+            <input type="text" style="width: 200px" name="stu_course_id" placeholder="Enter Course ID">
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_standard">Student Standard: </label>
+            <!--<input type="text" style="width: 200px" name="stu_standard" placeholder="Enter Standard" maxlength = "28"> -->
+            <select style="width: 200px" name="stu_standard" id="stu_standard">
+             <option value="11th Art">11th Art</option>
+             <option value="11th Commerce">11th Commerce</option>
+             <option value="11th Science">11th Science</option>
+             <option value="12th Art">12th Art</option>
+             <option value="12th Commerce">12th Commerce</option>
+             <option value="12th Science">12th Science</option>
+             <option value="First year">First year (FY)</option>
+             <option value="Second year">Second year (SY)</option>
+             <option value="third year">third year (TY)</option>
+                           
+          </select> 
+          
+        </p>
+        <br>
+
+        <p>
+            <label style="width: 140px" for="stu_category">Student Category: </label>
+            <input type="text" style="width: 200px" name="stu_category" placeholder="Enter Category" maxlength = "18">
+        </p>
+        <br>
+        <br>
+        </div>
+        <p>
+            <button class=button type="submit" value="submit">Submit Student Details</button>
+        </p>
+    </form>
+</body>
+</html>
+{% endblock %}

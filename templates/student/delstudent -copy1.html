@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DELETESTUDENT</title>
+    <link rel="stylesheet" href="../static/style1.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 38%;
+        background-color: #ffffcc;
+        outline: 1px #050218;
+        margin-left: 300px;
+        font-size: 24px;
+        position:fixed;
+           }
+     input {
+        display: inline-block;
+        margin-left: 450px;
+        outline: 1px #050218;
+        background-color:#ffffcc;
+            }
+     select {
+        margin-left: 150px;
+        outline: 1px #050218;
+        background-color:#ffffcc;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #140A46;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {
+background-color:#19152A;
+}
+
+.button:active {
+  background-color: #2C264A;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+    
+    {% extends "index.html" %}
+    {% block content %} 
+    <br>
+    <p style="font-size: 20px; margin-left: 340px;"> Enter the student ID for the record to be deleted </p>
+    <br>
+    <div style="height:450px;overflow-y:auto">
+    <form action="/delstudent" method="post">
+         
+         <p>
+            <input type ="text" style="width: 200px" name="stu_roll_no"  placeholder="Enter student ID" size="10" required />
+        </p> 
+        <br>
+        <br> 
+         </div>
+        <p>
+            <button class=button type="submit" value="submit">Submit Staff Details</button>
+        </p>
+    </form>
+    <br>
+    <br>
+      
+    <p style="margin-left: 250px;font-size: 30px;color: Red">{{ message }} <p>
+     
+</body>
+</html>
+{% endblock %}

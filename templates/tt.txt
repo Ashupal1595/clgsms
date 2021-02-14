@@ -1,0 +1,11 @@
+{% block content %}
+    {% endblock %}
+
+
+<link rel="stylesheet" href="../static/style.css">
+
+E:\Projects\sms\SMS\SMS1\static
+<link rel="stylesheet" href="E:\Projects\sms\SMS\SMS1\static/static/style.css">
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">

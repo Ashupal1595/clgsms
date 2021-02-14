@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+         <title>Add</title>
+    <style type="text/css">
+         tbody{
+            font-size:25px;
+            color:grey;
+            background:EBD3E8;
+            height:50px;
+            width:500px;
+         }
+    </style>
+</head>
+<body bgcolor="FFDCB9">
+<form action="{{url_for('addstu')}}" method="post">
+    <table >
+        <tbody>
+            <tr>
+                                 <td>Student number:</td>
+                                 <td><input type="text" placehoder="Please enter the student number" name="addnumber">
+                </td>
+            </tr>
+            <tr>
+                                 <td>Name:</td>
+                                 <td><input type="text" placehoder="Please enter a name" name="addname">
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                                 <td><input type="submit" value="OK"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+ <a href="{{url_for('index')}}">Go to the home page</a>
+</body>
+</html>

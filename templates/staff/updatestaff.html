@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATESTAFF</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 140px;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+
+           }
+     input {
+        display: inline-block;
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+     select {
+        margin-left: 150px;
+        outline: 2px solid blue;
+            }
+        h1{
+    font-size:30px;
+    color:blue;
+    text-align: center
+     }
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+
+    <p> <a href="/"> Goto Home</a></p>
+    <h1>Please update the staff details and submit the form</h1>
+    <br>
+    <br>
+    <form action="/updatestaff" method="post">
+         <p>
+            <label style="width: 140px"for="staff_id"><b>Staff ID:</b></label>
+            <input type ="text" style="width: 200px; background-color:lightblue" name="staff_id"  value="{{ row[0] }}" readonly placeholder="Enter Staff ID" size="10" required />
+        </p> 
+        <br>
+        <p> 
+            <label for="staff_first_name"><b>Staff First Name:</b></label>
+            <input style="width: 200px" type="text" name="staff_first_name" value="{{ row[1] }}" placeholder="Enter First Name" maxlength = "50">
+        </p>
+        <br>
+        <p>
+            <label for="staff_middle_name"><b>Staff Middle Name:</b></label>
+            <input style="width: 200px" type="text" name="staff_middle_name" value="{{ row[2] }}" placeholder="Enter  Middle Name" maxlength = "50">
+        </p>
+        <br>
+         <p>
+            <label for="staff_last_name"><b>Staff Last Name:</b></label>
+            <input style="width: 200px" type="text" name="staff_last_name" value="{{ row[3] }}" placeholder="Enter Last Name" maxlength = "50">
+        </p>
+         <br>
+         <p>
+            <label for="staff_gender"><b>Staff Gender:</b></label>
+             <select style="width: 200px" name="staff_gender" id="staff_gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+        </p>
+        <br> 
+        <p>
+            <label for="staff_mobile_no"><b>Staff Mobile No:</b></label>
+            <input style="width: 200px" type="text" name="staff_mobile_no" value="{{ row[5] }}" placeholder="Enter Mobile No" maxlength = "20">  
+        </p>
+        <br>
+        <p>
+            <label for="staff_address"><b>Staff Address:</b></label>
+            <input style="width: 200px" type="text" name="staff_address" value="{{ row[6] }}" placeholder="Enter your Address" maxlength = "200">
+        </p>
+        <br>
+        <p>
+            <label for="staff_role"><b>Staff Role:</b></label>
+            <input style="width: 200px" type="text" name="staff_role" value="{{ row[7] }}" placeholder="Enter Role" maxlength = "50">
+        </p>
+        <br>
+        <p>
+            <label for="staff_designation"><b>Staff Designation:</b></label>
+            <input style="width: 200px" type="text" name="staff_designation " value="{{ row[8] }}" placeholder="Enter Designation" maxlength = "50">
+        </p>
+        <br>
+        <p>
+            <label for="staff_type"><b>Staff Type:</b></label>
+            <!-- <input style="width: 200px" type="text" name="staff_type" placeholder="Select Type of the Staff"> -->
+          <select style="width: 200px" name="staff_type" id="staff_type">
+          <option value="Permanent">Permanent</option>
+          <option value="Temporary">Temporary</option>
+          </select>
+        </p>
+        <br>
+        <p>
+            <label for="staff_date_of_joining"><b>Date of Joining:</b></label>
+            <input style="width: 200px" type="date" id="staff_date_of_joining" name="staff_date_of_joining" value="{{row[10]}}" placeholder="Set the joining date">
+        </p>
+        <br> 
+        
+        <p>
+            <button class=button type="submit" value="submit">Submit Staff Details</button>
+        </p>
+    </form>
+ 
+</body>
+</html>

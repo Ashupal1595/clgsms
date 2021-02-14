@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DELETESTREAM</title>
+    <link rel="stylesheet" href="../static/style1.css">
+
+<style>
+     label {
+        display: inline-block;
+        width: 38%;
+        background-color: lightblue;
+        outline: 2px solid blue;
+        margin-left: 300px;
+        font-size: 24px;
+        position:fixed;
+           }
+     input {
+        display: inline-block;
+        margin-left: 450px;
+        outline: 2px solid blue;
+        font-size: 20px;
+            }
+     
+     body{
+        background-color:#66e0ff ;
+     }
+     button {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  width: 30%;
+  opacity: 0.9;
+  margin-left: 350px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  <!--box-shadow: 0 9px #999;-->
+  
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+     </style>
+ </head>
+<body>
+    <p> <a href="/"> Goto Home</a></p> 
+    <br>
+    <br>
+    <form action="/delstream" method="post">
+         <p>
+            <label for="stream_id"><b>Enter the Stream ID for the record to be deleted:</b></label>
+         </p>
+         <br>
+         <br>
+         <br>
+         <p>
+            <input type ="text" style="width: 200px" name="stream_id"  placeholder="Enter stream ID" size="10" required />
+        </p> 
+        <br>
+        <br> 
+        
+        <p>
+            <button class=button type="submit" value="submit">Submit stream Details</button>
+        </p>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="margin-left: 250px;font-size: 30px;color: Red">{{ message }} <p>
+      
+
+</body>
+</html>
